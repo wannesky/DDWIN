@@ -65,8 +65,8 @@ d-i netcfg/get_gateway string 192.177.65.1
 d-i netcfg/get_nameservers string 8.8.8.8
 d-i netcfg/confirm_static boolean true
 
-d-i debian-installer/locale string {locale}
-d-i console-keymaps-at/keymap select {keymap}
+d-i debian-installer/locale string string en_NZ.UTF-8
+d-i console-keymaps-at/keymap select us
     """
 
     preseed = preseed_template.format(
