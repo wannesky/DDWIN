@@ -57,12 +57,12 @@ d-i preseed/early_command string anna-install network-console
 d-i network-console/password password {password}
 d-i network-console/password-again password {password}
 
-d-i netcfg/choose_interface select {interface}
+d-i netcfg/choose_interface select eth0
 d-i netcfg/disable_dhcp boolean true
-d-i netcfg/get_ipaddress string {address}
-d-i netcfg/get_netmask string {netmask}
-d-i netcfg/get_gateway string {gateway}
-d-i netcfg/get_nameservers string {nameservers}
+d-i netcfg/get_ipaddress string 192.177.65.94
+d-i netcfg/get_netmask string 255.255.255.0
+d-i netcfg/get_gateway string 192.177.65.1
+d-i netcfg/get_nameservers string 8.8.8.8
 d-i netcfg/confirm_static boolean true
 
 d-i debian-installer/locale string {locale}
