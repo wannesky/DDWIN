@@ -51,7 +51,7 @@ if __name__ == "__main__":
     password = "".join("{:02x}".format(ord(c)) for c in open("/dev/urandom","rb").read(16))
 
     preseed_template = """
-d-i anna/choose_modules string network-console ntfs-3g-udeb ntfs-modules-4.19.0-11-amd64-di fuse-modules-4.19.0-11-amd64-di fuse-udeb
+d-i anna/choose_modules string network-console ntfs-3g-udeb ntfs-modules-4.9.0-8-amd64-di fuse-modules-4.9.0-8-amd64-di
 d-i preseed/early_command string anna-install network-console
 
 d-i network-console/password password {password}
